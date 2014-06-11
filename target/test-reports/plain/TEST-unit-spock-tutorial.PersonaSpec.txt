@@ -1,0 +1,10 @@
+Testsuite: tutorial.PersonaSpec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0,708 sec
+------------- Standard Output ---------------
+--Output from Buscar por nonbre--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from Buscar por nonbre--
+------------- ---------------- ---------------
+
+Testcase: Buscar por nonbre took 0,692 sec

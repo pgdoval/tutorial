@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="PabloGD" id="0" name="PersonaSpec" package="tutorial" tests="1" time="0.708" timestamp="2014-06-11T11:33:28">
+      <properties />
+
+      <testcase classname="tutorial.PersonaSpec" name="Buscar por nonbre" time="0.692" />
+
+      <system-out><![CDATA[--Output from Buscar por nonbre--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from Buscar por nonbre--
+]]></system-err>
+
+  </testsuite>
+</testsuites>
