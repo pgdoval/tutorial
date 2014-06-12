@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="PabloGD" name="tutorial.PersonaSpec" tests="1" time="0.708" timestamp="2014-06-11T11:33:28">
+<testsuite errors="0" failures="0" hostname="PabloGD" name="tutorial.PersonaSpec" tests="1" time="1.248" timestamp="2014-06-11T16:26:56">
   <properties />
-  <testcase classname="tutorial.PersonaSpec" name="Buscar por nonbre" time="0.692" />
+  <testcase classname="tutorial.PersonaSpec" name="Buscar por nonbre" time="0.726" />
   <system-out><![CDATA[--Output from Buscar por nonbre--
 ]]></system-out>
   <system-err><![CDATA[--Output from Buscar por nonbre--

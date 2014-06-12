@@ -1,0 +1,17 @@
+Testsuite: tutorial.PersonaServiceSpec
+Tests run: 1, Failures: 0, Errors: 1, Time elapsed: 0,119 sec
+------------- Standard Output ---------------
+--Output from Hay 2 españoles--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from Hay 2 españoles--
+------------- ---------------- ---------------
+
+Testcase: Hay 2 españoles took 0,114 sec
+	Caused an ERROR
+No signature of method: tutorial.PersonaServiceSpec.mockDomain() is applicable for argument types: (java.lang.Class) values: [class tutorial.PersonaService]
+Possible solutions: mockCodec(java.lang.Class), mockFor(java.lang.Class)
+groovy.lang.MissingMethodException: No signature of method: tutorial.PersonaServiceSpec.mockDomain() is applicable for argument types: (java.lang.Class) values: [class tutorial.PersonaService]
+Possible solutions: mockCodec(java.lang.Class), mockFor(java.lang.Class)
+	at tutorial.PersonaServiceSpec.Hay 2 españoles(PersonaServiceSpec.groovy:15)
+

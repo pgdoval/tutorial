@@ -3,9 +3,24 @@ import tutorial.*
 class BootStrap {
 
     def init = { servletContext ->
-        def p1 = new Persona(name:"Manuel", apellidos : "Perez Perez")
-        def p2 = new Persona(name:"Pepe", apellidos : "Perez Perez").save()
+//        Pais esp = new Pais(nombre:"España", codigo: "ESP")
+//        Pais usa = new Pais(nombre:"Estados Unidos", codigo: "USA")
+        Libro libro1= new Libro (titulo: "Los pilares de la tierra").save()
+        Libro libro2= new Libro (titulo: "Africanus", descripcion: "Escrito por Manuel Perez Perez. Epoca romanos").save()
+        Libro libro3= new Libro (titulo: "Jane Eyre", descripcion: "Escrito por Manuel Perez Perez. Epoca siglo XIX").save()
+        
+        
+        def p1 = new Persona(name:"Manuel", apellidos : "Perez Perez", libroFavorito:libro2, fechaNacimiento:new Date().parse('dd/MM/yyyy','01/01/1987'))
+        def p2 = new Persona(name:"Pepe", apellidos : "Perez Perez", libroFavorito:libro3, fechaNacimiento:new Date().parse('dd/MM/yyyy','01/11/1987')).save()
         p1.save()
+        
+        p1.addToLibrosEscritos(libro2).addToLibrosEscritos(libro3)
+        
+        if (!p1.save()) {
+            p1.errors.each {
+                println it
+            }
+        }
     }
     def destroy = {
     }

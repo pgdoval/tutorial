@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="PabloGD" id="0" name="PersonaSpec" package="tutorial" tests="1" time="0.708" timestamp="2014-06-11T11:33:28">
+  <testsuite errors="1" failures="0" hostname="PabloGD" id="0" name="PersonaServiceSpec" package="tutorial" tests="1" time="0.119" timestamp="2014-06-11T16:26:57">
       <properties />
 
-      <testcase classname="tutorial.PersonaSpec" name="Buscar por nonbre" time="0.692" />
+      <testcase classname="tutorial.PersonaServiceSpec" name="Hay 2 españoles" time="0.117">
+          <error message="No signature of method: tutorial.PersonaServiceSpec.mockDomain() is applicable for argument types: (java.lang.Class) values: [class tutorial.PersonaService]&#xa;Possible solutions: mockCodec(java.lang.Class), mockFor(java.lang.Class)" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: tutorial.PersonaServiceSpec.mockDomain() is applicable for argument types: (java.lang.Class) values: [class tutorial.PersonaService]
+Possible solutions: mockCodec(java.lang.Class), mockFor(java.lang.Class)
+	at tutorial.PersonaServiceSpec.Hay 2 españoles(PersonaServiceSpec.groovy:15)
+</error>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from Hay 2 españoles--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from Hay 2 españoles--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="PabloGD" id="1" name="PersonaSpec" package="tutorial" tests="1" time="1.248" timestamp="2014-06-11T16:26:56">
+      <properties />
+
+      <testcase classname="tutorial.PersonaSpec" name="Buscar por nonbre" time="0.726" />
 
       <system-out><![CDATA[--Output from Buscar por nonbre--
 ]]></system-out>
