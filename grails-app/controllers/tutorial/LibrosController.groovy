@@ -15,4 +15,13 @@ class LibrosController {
         render(view: "librosEscritos", model: [persona: p])
     }
     
+    def editorialesDistintas(){
+        //vamos a obtener las editoriales con las que ha 
+        //trabajado un escritor usando para ello HQL
+        
+        
+        
+        
+    }
+    
 }
