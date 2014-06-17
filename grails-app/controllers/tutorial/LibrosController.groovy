@@ -15,12 +15,14 @@ class LibrosController {
         render(view: "librosEscritos", model: [persona: p])
     }
     
-    def editorialesDistintas(){
-        //vamos a obtener las editoriales con las que ha 
-        //trabajado un escritor usando para ello HQL
+    def escritoresDeEditorial(){
+        //vamos a obtener las personas que han trabajado con una editorial
+        // usando para ello HQL
         
-        
-        
+        List<Persona> personas = Persona.executeQuery("select p from Persona p inner join p.librosEscritos as e where e.editorial = :editorial", [editorial: params.editorial]);
+        personas.each(){
+            render(it)
+        }
         
     }
     
