@@ -11,7 +11,7 @@ class BootStrap {
         
         
         def p1 = new Persona(name:"Manuel", apellidos : "Perez Perez", libroFavorito:libro2, fechaNacimiento:new Date().parse('dd/MM/yyyy','01/01/1987'))
-        def p2 = new Persona(name:"Pepe", apellidos : "Perez Perez", libroFavorito:libro3, fechaNacimiento:new Date().parse('dd/MM/yyyy','01/11/1987')).save()
+        def p2 = new Persona(name:"Pepe", apellidos : "Perez Perez", libroFavorito:libro3, fechaNacimiento:new Date().parse('dd/MM/yyyy','27/11/1989')).save()
         p1.save()
         
         p1.addToLibrosEscritos(libro2).addToLibrosEscritos(libro3)

@@ -65,6 +65,78 @@ class LibrosController {
         }
 
     } 
+        
+       def escritoresDeEditorialCriteriaCount(){
+        //vamos a obtener el número de personas que han trabajado con una editorial
+        // usando para ello el método createCriteria
+        
+        //creamos el Criteria
+        def c = Persona.createCriteria()
+        
+        //usamos el método get, que vale para cuando sólo devuelves un valor
+        def personas = c.get{
+            librosEscritos{
+                eq('editorial', params.editorial)
+            }
+            projections
+            {
+                countDistinct('id')
+            }
+        }
+        
+        personas.each(){
+            render(it)
+        }
+
+    } 
+    
+    
+     def escritoresDeEditorialCriteriaOr(){
+        //vamos a obtener las personas que han trabajado con una editorial
+        // usando para ello el método createCriteria
+        
+        //creamos el Criteria
+        def c = Persona.createCriteria()
+        
+        //usamos el método list, aunque realmente hay otros métodos que se pueden usar
+        def personas = c.list{
+            or{
+                librosEscritos{
+                    eq('editorial', params.editorial)
+                }
+                //le('edad',26) -> esto no funciona porque edad es un transient, no una propiedad que haya en BD
+                ge('fechaNacimiento',new Date().parse('dd/MM/yyyy','01/01/' + params.anhoNacMin))
+            }
+        }
+        
+        personas.each(){
+            render(it)
+        }
+
+    }   
+    
+    def escritoresDeEditorialCriteriaNombreCompleto(){
+        //vamos a obtener las personas que han trabajado con una editorial
+        // usando para ello el método createCriteria
+        
+        //creamos el Criteria
+        def c = Persona.createCriteria()
+        
+        //usamos el método list, aunque realmente hay otros métodos que se pueden usar
+        def personas = c.list{
+            librosEscritos{
+                eq('editorial', params.editorial)
+            }
+            projections {
+                sqlProjection "name||' '|| apellidos as nombreCompleto", ['nombreCompleto'], [STRING]
+            }
+        }
+        
+        personas.each(){
+            render(it+"\n")
+        }
+
+    } 
     
     
 }
