@@ -46,7 +46,25 @@ class LibrosController {
 
     }
     
-    
+       def escritoresDeEditorialCriteria2(){
+        //vamos a obtener las personas que han trabajado con una editorial
+        // usando para ello el método createCriteria
+        
+        //creamos el Criteria
+        def c = Persona.createCriteria()
+        
+        //usamos el método list, aunque realmente hay otros métodos que se pueden usar
+        def personas = c.list{
+            librosEscritos{
+                eq('editorial', params.editorial)
+            }
+        }
+        
+        personas.each(){
+            render(it)
+        }
+
+    } 
     
     
 }
